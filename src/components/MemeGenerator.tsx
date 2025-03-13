@@ -20,10 +20,12 @@ const MemeGenerator = () => {
     setError("");
 
     try {
+      // Send POST request to backend with the user input
       const response = await axios.post("http://localhost:5000/generate-meme", {
         text: userInput,
       });
 
+      // Update the memeUrl with the generated meme URL from the backend response
       setMemeUrl(response.data.imageUrl);
     } catch (error) {
       console.error("Error generating meme:", error);
