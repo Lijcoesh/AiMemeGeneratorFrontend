@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
+import { supabase } from "./supabaseClient2";
 import MemeGenerator from "./components/MemeGenerator";
 import Navbar from "./components/Navbar";
 import type { User } from "@supabase/supabase-js";

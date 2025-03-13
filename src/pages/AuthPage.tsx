@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { supabase } from "../supabaseClient";
+import { supabase } from "../supabaseClient2";
 import { Loader2, ArrowLeft, User, Mail, Lock } from "lucide-react";
 
 const AuthPage = () => {
