@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { supabase } from "./SupaBaseClient";
+import { supabase } from "./supabaseClient";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +9,7 @@ const Auth = () => {
   const handleSignUp = async () => {
     const { error } = await supabase.auth.signUp({ email, password });
     if (error) setError(error.message);
-  };
+  }; //test
 
   const handleSignIn = async () => {
     const { error } = await supabase.auth.signInWithPassword({
