@@ -55,7 +55,11 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
-      <Navbar user={user} username={username} onSignOut={handleSignOut} />
+      <Navbar
+        user={user}
+        username={username}
+        onSignOut={handleSignOut}
+      />
       <div className="pt-20">
         {" "}
         {/* Increased padding to ensure content doesn't get hidden under navbar */}

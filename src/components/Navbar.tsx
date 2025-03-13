@@ -12,7 +12,11 @@ interface NavbarProps {
   onSignOut: () => Promise<void>;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ user, username, onSignOut }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  user,
+  username,
+  onSignOut,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);

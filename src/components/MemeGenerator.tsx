@@ -3,14 +3,23 @@
 import { useState } from "react";
 import axios from "axios";
 import { Wand2, Loader2, AlertCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useUser } from "../hooks/useUser"; // Custom hook to get the current user
 
 const MemeGenerator = () => {
   const [userInput, setUserInput] = useState("");
   const [memeUrl, setMemeUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Initialize navigate
+  const { user } = useUser(); // Get the current user and credits
 
   const generateMeme = async () => {
+    if (!user) {
+      setError("You must be logged in to generate a meme.");
+      return;
+    }
+
     if (!userInput.trim()) {
       setError("Please enter some text to generate a meme");
       return;
