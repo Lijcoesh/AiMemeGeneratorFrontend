@@ -77,7 +77,7 @@ const MemeGenerator = () => {
           </div>
 
           {error && (
-            <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-lg flex items-center gap-2">
+            <div className="mt-4 p-3 bg-red-50 text-red-500 rounded-lg flex items-center gap-2">
               <AlertCircle className="h-5 w-5" />
               <span>{error}</span>
             </div>
